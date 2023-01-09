@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', Arial;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+main
+{
+    width: 100vw;
+    height: 100vh;
+
+    background: #006d77;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container
+    {
+        width: 550px;
+        height: 650px;
+        border-radius: 10px;
+
+        background: #FFF;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 2rem 0 2rem 0;
+
+        @media screen and (max-width: 699px) {
+            width: 90vw;
+        }
+
+
+        .titulo_principal{
+            width: 90%;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .tabela_imc{
+            width: 90%;
+
+            display: flex;
+            flex-direction: row;
+
+
+            div{
+                width: 50%;
+                height: 250px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+            }
+        }
+
+        .area_de_calculo{
+            width: 90%;
+
+            .titulo_princial_calculo{
+                height: 50px;
+
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            form{
+                height: 200px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+
+                
+
+                .peso, .altura{
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    input{
+                        height: 40px;
+                        padding: 5px;
+
+                        border-radius: 5px;
+                        border: 1px solid #006d77;
+                        outline: none;
+                        
+                        font-size: 1rem;
+
+                        &:focus{
+                            outline: 1px solid #006d77;
+                        }
+
+                        @media screen and (max-width: 699px) {
+                            width: 100%; 
+                        }
+                    }
+
+                    }
+
+
+                }
+
+
+                .buttons
+                {
+
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    @media screen and (max-width: 699px) {
+                        flex-direction: column;
+                        gap: .5rem;
+                    }
+
+                    button{
+                        width: 49%;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: 0;
+    
+                        background: #006d77;
+                        color: #FFF;
+    
+                        font-weight: 600;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+    
+                        transition: .1s ease-in;
+    
+                        &:hover{
+                            cursor: pointer;
+    
+                            background: rgb(0, 90, 98);
+                        }
+
+                        @media screen and (max-width: 699px) {
+                            width: 100%; 
+                        }
+                    }
+                }
+
+                
+            }
+        
+        }
+
+        #resultado{
+            width: 90%;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 15px;
+
+            font-weight: 600;
+            letter-spacing: 1px;
+
+            color: #FFF;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: 699px) {
+                margin-top: 1rem;
+                
+            }
+            
+        }
+
+        
+
+    }

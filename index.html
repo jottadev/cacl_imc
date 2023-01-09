@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo IMC</title>
+
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link SCSS -->
+    <script src="assets/js/main.js" defer></script> <!-- Link Script -->
+
+    <!-- Import Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="titulo_principal">
+                <h2> Tabela IMC </h2>
+            </div>
+            <div class="tabela_imc">
+                <div>
+                    <h3> IMC </h3>
+                    <p> Menos do que 18,5 </p>
+                    <p> Entre 18,5 e 24,9 </p>
+                    <p> Entre 25 e 29,9 </p>
+                    <p> Entre 30 e 34,9 </p>
+                    <p> Entre 35 e 39,9 </p>
+                    <p> Mais do que 40 </p>
+                </div>
+                <div>
+                    <h3> Resultado </h3>
+                    <p> Abaixo do peso </p>
+                    <p> Peso normal </p>
+                    <p> Sobrepeso </p>
+                    <p> Obesidade grau I </p>
+                    <p> Obesidade grau II </p>
+                    <p> Obesidade grau III </p>
+                </div>
+            </div>
+            <div class="area_de_calculo">
+                <div class="titulo_princial_calculo">
+                    <h2> Calcule seu IMC </h2>
+                </div>
+                <form action="#">
+                    <div class="peso">
+                        <label for="inpPeso"> Peso: </label>
+                        <input type="number" name="number" id="inpPeso" min="1" placeholder="Quilos">
+                    </div>
+
+                    <div class="altura">
+                        <label for="inpAltura"> Altura: </label>
+                        <input type="number" name="number" id="inpAltura" min="1" placeholder="Metros">
+                    </div>
+
+                    <div class="buttons">
+                        <button class="btnCalcular"> Calcular </button>
+                        <button class="btnLimpar"> Limpar </button>
+                    </div>
+                </form>
+            </div>
+
+            <p id="resultado"> </p>
+        </div>
+    </main>
+</body>
+</html>
